@@ -4,12 +4,13 @@ DATA_DIR = "../data"
 PIPELINE_RUN_DIR = "../pipeline_runs"
 
 SEED_SETS = [
-    {"name": "Amyotrophic lateral sclerosis", "short": "ALS", "mondo": "0004976", "disgenet": "C0002736"},
-    {"name": "Lung adenocarcinoma", "short": "LUAD", "mondo": "0005061", "disgenet": "C0152013"},
-    {"name": "Ulcerative colitis", "short": "UC", "mondo": "0005101", "disgenet": "C0009324"},
-    {"name": "Crohn disease", "short": "CD", "mondo": "0005011", "disgenet": "C0156147"},
-    {"name": "Huntington disease", "short": "HD", "mondo": "0007739", "disgenet": "C0020179"},
+    {"name": "Amyotrophic lateral sclerosis", "short": "ALS", "mondo": "0004976", "disgenet": "C0002736", "color": "#4C72B0"},
+    {"name": "Lung adenocarcinoma", "short": "LUAD", "mondo": "0005061", "disgenet": "C0152013", "color": "#55A868"},
+    {"name": "Ulcerative colitis", "short": "UC", "mondo": "0005101", "disgenet": "C0009324", "color": "#C44E52"},
+    {"name": "Crohn disease", "short": "CD", "mondo": "0005011", "disgenet": "C0156147", "color": "#8172B2"},
+    {"name": "Huntington disease", "short": "HD", "mondo": "0007739", "disgenet": "C0020179", "color": "#CCB974"},
 ]
+
 
 NETWORKS = [
     {'id': 'iid.human.Symbol', 'label': 'IID', 'color': '#b15928'},
