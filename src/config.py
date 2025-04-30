@@ -4,10 +4,10 @@ DATA_DIR = "../data"
 PIPELINE_RUN_DIR = "../pipeline_runs"
 
 SEED_SETS = [
-    {"name": "Amyotrophic lateral sclerosis", "short": "ALS", "mondo": "0004976", "disgenet": "C0002736", "color": "#4C72B0"},
     {"name": "Lung adenocarcinoma", "short": "LUAD", "mondo": "0005061", "disgenet": "C0152013", "color": "#55A868"},
-    {"name": "Ulcerative colitis", "short": "UC", "mondo": "0005101", "disgenet": "C0009324", "color": "#C44E52"},
+    {"name": "Amyotrophic lateral sclerosis", "short": "ALS", "mondo": "0004976", "disgenet": "C0002736", "color": "#4C72B0"},
     {"name": "Crohn disease", "short": "CD", "mondo": "0005011", "disgenet": "C0156147", "color": "#8172B2"},
+    {"name": "Ulcerative colitis", "short": "UC", "mondo": "0005101", "disgenet": "C0009324", "color": "#C44E52"},
     {"name": "Huntington disease", "short": "HD", "mondo": "0007739", "disgenet": "C0020179", "color": "#CCB974"},
 ]
 
@@ -23,4 +23,14 @@ NETWORKS = [
     {'id': 'string.human_links_v12_0_min900.Symbol', 'label': 'STRING (highest confidence)', 'color': '#fb9a99'}, 
     {'id': 'string.human_physical_links_v12_0_min700.Symbol', 'label': 'STRING (physical, high confidence)', 'color': '#ff7f00'}, 
     {'id': 'string.human_physical_links_v12_0_min900.Symbol', 'label': 'STRING (physical, highest confidence)', 'color': '#fdbf6f'}, 
+]
+
+AMIMS = [
+    {'id': 'no_tool', 'label': 'Only seeds', 'color': '#b3b3b3'},
+    {'id': 'domino', 'label': 'DOMINO', 'color': '#8da0cb'},
+    {'id': 'robust', 'label': 'ROBUST', 'color': '#66c2a5'},
+    {'id': 'robust_bias_aware', 'label': 'ROBUST\n(bias aware)', 'color': '#a6d854'},
+    {'id': 'diamond', 'label': 'DIAMOnD', 'color': '#e78ac3'},
+    {'id': 'rwr', 'label': 'RWR', 'color': '#e5c494'},
+    {'id': 'firstneighbor', 'label': '1st Neighbors', 'color': '#fc8d62'},
 ]
