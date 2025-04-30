@@ -24,6 +24,8 @@ def split_module_id(module_id):
     return pd.concat([split_seed_id(".".join(parts[:-1])), pd.Series([amim_id])], ignore_index=True)
 
 def load_seed_stats(path=os.path.join(PIPELINE_RUN_DIR, "main/results/mqc_summaries/input_seeds_mqc.tsv")):
+    network_meta_df = pd.DataFrame.from_dict(NETWORKS)
+
     df = pd.read_csv(path, sep="\t")
 
     # Add a new column "Seeds total" that is the sum of "Seeds" and "Not in network"
@@ -31,6 +33,8 @@ def load_seed_stats(path=os.path.join(PIPELINE_RUN_DIR, "main/results/mqc_summar
 
     # Split the id into seed_id and network_id
     df[["seed_id", "network_id"]] = df["Seed file"].apply(split_seed_id)
+
+    df["network"] = df["network_id"].replace(dict(zip(network_meta_df.id, network_meta_df.label)))
     
     return df
 
