@@ -23,6 +23,17 @@ def split_module_id(module_id):
     amim_id = parts[-1]
     return pd.concat([split_seed_id(".".join(parts[:-1])), pd.Series([amim_id])], ignore_index=True)
 
+def load_network_topology(path=os.path.join(PIPELINE_RUN_DIR, "main/results/mqc_summaries/input_network_mqc.tsv")):
+
+    network_meta_df = pd.DataFrame.from_dict(NETWORKS)
+    df = pd.read_csv(path, sep="\t")
+
+    df["network"] = df["Network"].replace(dict(zip(network_meta_df.id, network_meta_df.label)))
+    df.set_index("Network", inplace=True)
+    df = df.loc[network_meta_df.id.values,:] # order by network
+
+    return df
+
 def load_seed_stats(path=os.path.join(PIPELINE_RUN_DIR, "main/results/mqc_summaries/input_seeds_mqc.tsv")):
     network_meta_df = pd.DataFrame.from_dict(NETWORKS)
 
