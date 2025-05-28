@@ -173,4 +173,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-pipeline_runs/
+pipeline_runs/*/results*/
+.nextflow*
