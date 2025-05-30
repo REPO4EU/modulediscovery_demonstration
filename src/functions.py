@@ -67,3 +67,21 @@ def load_module_topology(path=os.path.join(PIPELINE_RUN_DIR, "main/results/mqc_s
     df["amim"] = df["amim_id"].replace(dict(zip(amim_meta_df.id, amim_meta_df.label)))
 
     return df
+
+def load_merged_stats():
+    module_df = load_module_topology()
+    seeds_df = load_seed_stats()
+    networks_df = load_network_topology()
+
+    # Rename columns to avoid conflicts when merging
+    id_vars = ["seed_id", "network_id", "network", "amim", "amim_id"] # do not prefix these columns
+    module_df  = module_df .rename(columns=lambda c: f"{c}_module" if c not in id_vars else c)
+    seeds_df  = seeds_df .rename(columns=lambda c: f"{c}_seeds" if c not in id_vars else c)
+    networks_df  = networks_df .rename(columns=lambda c: f"{c}_network" if c not in id_vars else c)
+
+    df_merged = module_df.merge(seeds_df, on=["seed_id", "network_id", "network"]).merge(networks_df, on=["network"])
+    df_merged["dropped_seeds_module"] = df_merged.Seeds_seeds - df_merged.seeds_module
+    df_merged["included_seeds_percent_module"] = df_merged.seeds_module / df_merged.Seeds_seeds * 100
+    df_merged["module_id"] = df_merged["sample_module"]
+
+    return df_merged
