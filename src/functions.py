@@ -1,6 +1,9 @@
 import os
 import pandas as pd
-from config import PIPELINE_RUN_DIR, NETWORKS, AMIMS, SEED_SETS
+import matplotlib.pyplot as plt
+import json
+import requests
+from config import PIPELINE_RUN_DIR, FIGURE_DIR, NETWORKS, AMIMS, SEED_SETS
 
 def split_seed_id(seed_id):
     """
@@ -85,3 +88,15 @@ def load_merged_stats():
     df_merged["module_id"] = df_merged["sample_module"]
 
     return df_merged
+
+def save_figure(fig, filename, dir=FIGURE_DIR, formats=["pdf", "png"]):
+    """
+    Saves a figure to the specified path.
+    """
+
+    for format in formats:
+        if format not in ["pdf", "png"]:
+            raise ValueError(f"Unsupported format: {format}. Supported formats are: pdf, png.")
+        if not os.path.exists(os.path.join(dir, format)):
+            os.makedirs(os.path.join(dir, format))
+        fig.savefig(os.path.join(dir, format, f"{filename}.{format}"), bbox_inches='tight', dpi=600)

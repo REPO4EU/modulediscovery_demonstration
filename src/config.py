@@ -2,6 +2,7 @@ import os
 
 DATA_DIR = "../data"
 PIPELINE_RUN_DIR = "../pipeline_runs"
+FIGURE_DIR = "../figures"
 
 SEED_SETS = [
     {"name": "Huntington disease", "short": "HD", "mondo": "0007739", "disgenet": "C0020179", "color": "#CCB974"},
