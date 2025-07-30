@@ -99,3 +99,16 @@ def save_figure(fig, filename, dir=FIGURE_DIR, formats=["pdf", "png"]):
         if not os.path.exists(os.path.join(dir, format)):
             os.makedirs(os.path.join(dir, format))
         fig.savefig(os.path.join(dir, format, f"{filename}.{format}"), bbox_inches='tight', dpi=600)
+
+def expected_jaccard_index(n, a, b):
+    """
+    Calculate the expected Jaccard index for two sets (with sizes a and b) sampled from a population of size n.
+    """
+    if a > n or b > n:
+        raise ValueError("a and b cannot be greater than n when sampling without replacement within each set.")
+    if a == 0 or b == 0:
+        return 0.0
+    p = a / n  # probability of an element being in set1
+    q = b / n  # probability of an element being in set2
+    
+    return (p * q / (p + q - p * q))
