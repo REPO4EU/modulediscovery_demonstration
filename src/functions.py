@@ -59,7 +59,6 @@ def load_module_topology(path=os.path.join(PIPELINE_RUN_DIR, "main/results/mqc_s
 
     df = pd.read_csv(path, sep="\t")
 
-    # Add a new column "Seeds total" that is the sum of "Seeds" and "Not in network"
     df["added_nodes"] = df["nodes"] - df["seeds"]
 
     # Split the id into seed_id, network_id, and amim_id
