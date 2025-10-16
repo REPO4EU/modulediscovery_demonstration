@@ -30,7 +30,7 @@ AMIMS = [
     {'id': 'no_tool', 'label': 'Only seeds', 'color': '#b3b3b3'},
     {'id': 'domino', 'label': 'DOMINO', 'color': '#8da0cb'},
     {'id': 'robust', 'label': 'ROBUST', 'color': '#66c2a5'},
-    {'id': 'robust_bias_aware', 'label': 'ROBUST\n(bias aware)', 'color': '#a6d854'},
+    {'id': 'robust_bias_aware', 'label': 'ROBUST\n(bias-aware)', 'color': '#a6d854'},
     {'id': 'diamond', 'label': 'DIAMOnD', 'color': '#e78ac3'},
     {'id': 'rwr', 'label': 'RWR', 'color': '#e5c494'},
     {'id': 'firstneighbor', 'label': '1st Neighbors', 'color': '#fc8d62'},
