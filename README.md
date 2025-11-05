@@ -3,7 +3,7 @@
 ## Usage
 Clone repository:
 ```bash
-git https://github.com/JohannesKersting/modulediscovery_demonstration.git
+git clone https://github.com/REPO4EU/modulediscovery_demonstration.git
 ```
 Install dependencies with conda:
 ```bash
