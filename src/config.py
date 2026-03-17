@@ -14,16 +14,16 @@ SEED_SETS = [
 
 
 NETWORKS = [
-    {'id': 'string.human_physical_links_v12_0_min900.Symbol', 'label': 'STRING (physical, highest confidence)', 'color': '#fdbf6f'},
-    {'id': 'string.human_physical_links_v12_0_min700.Symbol', 'label': 'STRING (physical, high confidence)', 'color': '#ff7f00'},
-    {'id': 'string.human_links_v12_0_min900.Symbol', 'label': 'STRING (highest confidence)', 'color': '#fb9a99'},
-    {'id': 'nedrex.reviewed_proteins_exp_high_confidence.Symbol', 'label': 'NeDRex (high confidence)', 'color': '#cab2d6'},
-    {'id': 'hippie.v2_3_high_confidence.Symbol', 'label': 'HIPPIE (high confidence)', 'color': '#b2df8a'},
-    {'id': 'string.human_links_v12_0_min700.Symbol', 'label': 'STRING (high confidence)', 'color': '#e31a1c'},
-    {'id': 'hippie.v2_3_medium_confidence.Symbol', 'label': 'HIPPIE (medium confidence)', 'color': '#33a02c'},
-    {'id': 'biogrid.4_4_242_homo_sapiens.Symbol', 'label': 'BioGRID', 'color': '#1f78b4'},
-    {'id': 'nedrex.reviewed_proteins_exp.Symbol', 'label': 'NeDRex', 'color': '#6a3d9a'},
-    {'id': 'iid.human.Symbol', 'label': 'IID', 'color': '#b15928'},
+    {'id': 'string.human_physical_links_v12_0_min900.Symbol', 'label': 'STRING (physical, highest confidence)', 'label_break': 'STRING (physical,\n highest confidence)', 'color': '#fdbf6f'},
+    {'id': 'string.human_physical_links_v12_0_min700.Symbol', 'label': 'STRING (physical, high confidence)', 'label_break': 'STRING (physical,\n high confidence)', 'color': '#ff7f00'},
+    {'id': 'string.human_links_v12_0_min900.Symbol', 'label': 'STRING (highest confidence)', 'label_break': 'STRING\n(highest confidence)', 'color': '#fb9a99'},
+    {'id': 'nedrex.reviewed_proteins_exp_high_confidence.Symbol', 'label': 'NeDRex (high confidence)', 'label_break': 'NeDRex\n(high confidence)', 'color': '#cab2d6'},
+    {'id': 'hippie.v2_3_high_confidence.Symbol', 'label': 'HIPPIE (high confidence)', 'label_break': 'HIPPIE\n(high confidence)', 'color': '#b2df8a'},
+    {'id': 'string.human_links_v12_0_min700.Symbol', 'label': 'STRING (high confidence)', 'label_break': 'STRING\n(high confidence)', 'color': '#e31a1c'},
+    {'id': 'hippie.v2_3_medium_confidence.Symbol', 'label': 'HIPPIE (medium confidence)', 'label_break': 'HIPPIE\n(medium confidence)', 'color': '#33a02c'},
+    {'id': 'biogrid.4_4_242_homo_sapiens.Symbol', 'label': 'BioGRID', 'label_break': 'BioGRID', 'color': '#1f78b4'},
+    {'id': 'nedrex.reviewed_proteins_exp.Symbol', 'label': 'NeDRex', 'label_break': 'NeDRex', 'color': '#6a3d9a'},
+    {'id': 'iid.human.Symbol', 'label': 'IID', 'label_break': 'IID', 'color': '#b15928'},
 ]
 
 AMIMS = [
