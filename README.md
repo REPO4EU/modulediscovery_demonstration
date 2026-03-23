@@ -28,5 +28,5 @@ Download the [pipeline run results](https://zenodo.org/records/17536307) and pla
 - [`src/06_visualize_seed_perturbation.ipynb`](./src/06_visualize_seed_perturbation.ipynb): Visualizes the results of the seed perturbation analysis (robustness and rediscovery).
 - [`src/07_visualize_network_perturbation.ipynb`](./src/07_visualize_network_perturbation.ipynb): Visualizes the results of the degree-preserving network rewiring analysis.
 - [`src/08_visualize_digest.ipynb`](./src/08_visualize_digest.ipynb): Visualizes the functional coherence analysis results.
-- [`src/08_visualize_ora.ipynb`](./src/08_visualize_ora.ipynb): Visualizes the over-representation analysis results.
+- [`src/09_visualize_ora.ipynb`](./src/09_visualize_ora.ipynb): Visualizes the over-representation analysis results.
 
